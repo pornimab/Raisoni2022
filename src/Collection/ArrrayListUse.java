@@ -18,9 +18,6 @@ public class ArrrayListUse {
 		al.add(null);  //6
 		
 		
-		System.out.println("hello i am ");
-		System.out.println("hey how r u");
-		
 		System.out.println(al);
 		System.out.println(al.size());
 		System.out.println(al.isEmpty());
