@@ -1,0 +1,28 @@
+package KiteappPOM;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testclass {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32\\chromedriver.exe"); 
+
+		WebDriver W=new ChromeDriver();
+		W.manage().window().maximize();
+		W.get("https://kite.zerodha.com");
+		
+		Thread.sleep(2000);
+		
+		KiteLoginPage login=new KiteLoginPage(W);
+		
+		login.sendusername();
+		login.sendpassword();
+		login.clickonLoginButton();
+
+	}
+
+}
+
+
